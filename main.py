@@ -4,7 +4,9 @@ from telegram.ext.filters import Filters
 from telegram.update import Update
 import requests
 import settings
-
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 # bot = Bot(token='5004960896:AAHdBx7XQ0Nju_vcputVTKd2hG-WD4uBhzo')
 # print(bot.get_me())
 updater = Updater(token=settings.TELEGRAM_TOKEN)
